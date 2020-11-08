@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Pane prefHeight="712.0" prefWidth="800.0">
+         <children>
+            <TableView fx:id="tblMain" prefHeight="466.0" prefWidth="800.0">
+              <columns>
+                <TableColumn fx:id="tblColCity" editable="false" prefWidth="252.0" text="City" />
+                <TableColumn fx:id="tblColTemperature" editable="false" prefWidth="121.0" text="Temperature" />
+                  <TableColumn fx:id="tblColWeather" editable="false" prefWidth="350.0" text="Weather" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtCity" layoutX="13.0" layoutY="519.0" prefHeight="40.0" prefWidth="309.0" />
+            <Button fx:id="btnGetWeather" layoutX="13.0" layoutY="566.0" mnemonicParsing="false" onAction="#getData" prefHeight="40.0" prefWidth="351.0" text="Get weather in city">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Label layoutX="13.0" layoutY="474.0" prefHeight="40.0" prefWidth="351.0" text="Enter city name:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtLog" editable="false" layoutX="409.0" layoutY="519.0" prefHeight="169.0" prefWidth="377.0" />
+            <Label layoutX="408.0" layoutY="474.0" prefHeight="40.0" prefWidth="377.0" text="Log:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnShowCurrent" layoutX="13.0" layoutY="607.0" mnemonicParsing="false" onAction="#showCurrent" prefHeight="40.0" prefWidth="351.0" text="Show only this city">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnShowAll" layoutX="14.0" layoutY="647.0" mnemonicParsing="false" onAction="#showAll" prefHeight="40.0" prefWidth="351.0" text="Show all added">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClear" layoutX="321.0" layoutY="519.0" mnemonicParsing="false" onAction="#clearCity" prefHeight="40.0" prefWidth="44.0" text="✕">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
